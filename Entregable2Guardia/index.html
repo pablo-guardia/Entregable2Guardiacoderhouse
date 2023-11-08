@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="./script/scriptEntregable2Guardia.js"></script>
+    <link rel="icon" href="./css/imagenCruzIcono.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .list {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <title>Clinica Guardia</title>
+</head>
+<body>
+    <h1>Clinica Guardia</h1>
+    <div>
+        <h2>Admision de Pacientes</h2>
+    </div>
+    <a href="paginas de listados pacientes segun especialidad/listado pacientes pediatria.html">Click aqui para listado de Pediatria</a>
+    <div class="container">
+        <label for='Nombre: '>Nombre:   </label>
+        <input type="text" id='Nombre:'>
+    </div>
+    <div class="container">
+        <label for="Apellido: ">Apellido: </label>
+        <input type="text" id="Apellido: ">
+    </div>
+    <div class="container">
+        <label for="Edad: ">Edad: </label>
+        <input type="text" id="Edad: ">
+    </div>
+    <button onclick="agregar()">Agregar a la lista</button>
+    <ul id="listado" class="list"></ul>
+
+    <script>
+        function agregar() {
+            var listado = document.getElementById('listado');
+            var nombre = document.getElementById('Nombre: ').value;
+            var apellido = document.getElementById('Apellido: ').value;
+            var edad = document.getElementById('Edad: ').value;
+            listado.innerHTML += '<li>' + nombre + ', ' + apellido + ', ' + edad + '</li>';
+        }
+    </script>
+
+</body>
+</html>
